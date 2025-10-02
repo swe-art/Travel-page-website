@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Journey - Bharat Darshan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #D4AF37; /* Rich Gold */
+      --color-secondary: #4B0000; /* Maroon */
+      --color-cream: #FBF9F1;
+    }
+    body {
+      font-family: 'Lora', serif;
+      background-color: var(--color-cream);
+      color: #1E1E1E;
+    }
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+    .hero-book {
+      background: url('https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=2940&auto=format&fit=crop') center/cover no-repeat;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .hero-book::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(75,0,0,0.6); /* maroon overlay */
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="bg-white/95 backdrop-blur-sm shadow-xl sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
+        <a href="index.html" class="text-3xl font-extrabold text-maroon uppercase tracking-wider">
+          Bharat <span class="text-gold">Darshan</span>
+        </a>
+        <div class="hidden sm:flex space-x-8 font-semibold">
+          <a href="destinations.html" class="text-maroon hover:text-gold">Destinations</a>
+          <a href="an.html" class="text-maroon hover:text-gold">Experiences</a>
+          <a href="book now.html" class="bg-gold text-maroon px-5 py-2 rounded-full shadow hover:bg-[#c0a030]">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-book">
+    <div class="hero-content">
+      <h1 class="text-6xl font-extrabold tracking-wide">Book Your Journey</h1>
+      <p class="mt-4 text-xl italic text-gold">Tailor your adventure, create timeless memories.</p>
+    </div>
+  </header>
+
+  <!-- Booking Form -->
+  <section class="max-w-5xl mx-auto py-20 px-6">
+    <h2 class="text-4xl font-extrabold text-center text-maroon mb-12">Travel Reservation Form</h2>
+
+    <form class="bg-white rounded-2xl shadow-2xl p-10 space-y-6 border-t-8 border-gold">
+      <!-- Personal Info -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block font-semibold text-maroon mb-2">Full Name</label>
+          <input type="text" class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-gold" placeholder="Enter your name" required>
+        </div>
+        <div>
+          <label class="block font-semibold text-maroon mb-2">Email Address</label>
+          <input type="email" class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-gold" placeholder="example@mail.com" required>
+        </div>
+      </div>
+
+      <!-- Travel Info -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block font-semibold text-maroon mb-2">Destination</label>
+          <select class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-gold">
+            <option>Select a destination</option>
+            <option>Taj Mahal & Golden Triangle</option>
+            <option>Kerala Backwaters</option>
+            <option>Himalayas (Ladakh)</option>
+            <option>Varanasi Spiritual Tour</option>
+          </select>
+        </div>
+        <div>
+          <label class="block font-semibold text-maroon mb-2">Travel Date</label>
+          <input type="date" class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-gold" required>
+        </div>
+      </div>
+
+      <!-- Guests -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block font-semibold text-maroon mb-2">Number of Travelers</label>
+          <input type="number" min="1" class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-gold" placeholder="e.g. 2" required>
+        </div>
+        <div>
+          <label class="block font-semibold text-maroon mb-2">Package Type</label>
+          <select class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-gold">
+            <option>Standard</option>
+            <option>Luxury</option>
+            <option>Customized</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Notes -->
+      <div>
+        <label class="block font-semibold text-maroon mb-2">Special Requests</label>
+        <textarea rows="4" class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-gold" placeholder="Any special requirements..."></textarea>
+      </div>
+
+      <!-- Submit -->
+      <div class="text-center">
+        <button type="submit" class="bg-gold text-maroon font-bold py-4 px-12 rounded-full shadow-lg hover:bg-[#c0a030] transition transform hover:scale-105">
+          Confirm Booking
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-200 py-10 text-center">
+    <p class="font-semibold">© 2025 Bharat Darshan Travel Co. | Crafted with ♥ for Explorers</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharat Darshan: Discover the Soul of India</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Define a richer, more elegant color palette and fonts */
+        :root {
+            --color-primary: #D4AF37; /* Rich Gold/Brass */
+            --color-secondary: #4B0000; /* Deep Maroon/Burgundy */
+            --color-cream: #FBF9F1;
+        }
+        body {
+            font-family: 'Lora', serif;
+            background-color: var(--color-cream);
+            color: #1E1E1E;
+        }
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--color-secondary);
+        }
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=2940&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center 30%;
+            background-attachment: fixed;
+        }
+        .text-gold { color: var(--color-primary); }
+        .bg-gold { background-color: var(--color-primary); }
+        .text-maroon { color: var(--color-secondary); }
+        .bg-maroon { background-color: var(--color-secondary); }
+        
+        /* Custom scroll indicator for elegance */
+        .scroll-indicator:after {
+            content: '';
+            display: block;
+            width: 1.5rem;
+            height: 1.5rem;
+            border: 2px solid var(--color-primary);
+            border-right: none;
+            border-top: none;
+            transform: rotate(45deg);
+            margin: 1rem auto 0;
+            animation: scroll-arrow 1.5s infinite;
+        }
+        @keyframes scroll-arrow {
+            0% { opacity: 0; transform: translateY(-10px) rotate(45deg); }
+            50% { opacity: 1; }
+            100% { opacity: 0; transform: translateY(10px) rotate(45deg); }
+        }
+        /* Review slider */
+    #reviews-slider { display: flex; }
+    .dot { width: 12px; height: 12px; border-radius: 50%; background: #ccc; display: inline-block; margin: 0 6px; cursor: pointer; }
+    .dot.active { background: var(--color-primary); }
+    </style>
+</head>
+<body>
+
+    <nav class="bg-white/95 backdrop-blur-sm shadow-xl sticky top-0 z-50 transition duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0 text-3xl font-extrabold text-maroon uppercase tracking-wider">
+                        Bharat <span class="text-gold">Darshan</span>
+                    </a>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-8 items-center">
+                    <a href="destinations.html" class="text-maroon hover:text-gold px-3 py-2 text-lg font-semibold transition duration-150">Destinations</a>
+                    <a href="an.html" class="text-maroon hover:text-gold px-3 py-2 text-lg font-semibold transition duration-150">Experiences</a>
+                    <a href="book now.html" class="bg-gold text-maroon hover:bg-[#c0a030] px-6 py-2 rounded-full text-lg font-semibold transition duration-300 shadow-md">
+                        Book Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-bg h-[90vh] flex items-center justify-center relative">
+        <div class="absolute inset-0 bg-maroon opacity-50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-maroon/50 to-transparent"></div>
+        
+        <div class="text-center relative z-10 p-4">
+            <h1 class="text-7xl md:text-8xl font-extrabold text-white tracking-widest leading-none" style="font-family: 'Poppins', sans-serif;">
+                THE SOUL OF <span class="text-gold">INDIA</span>
+            </h1>
+            <h2 class="mt-4 text-2xl text-gold font-normal italic max-w-3xl mx-auto">
+                Discover a Civilization. Experience a Million Worlds.
+            </h2>
+            <a href="#regions" class="mt-12 inline-block bg-gold text-maroon font-extrabold py-4 px-10 rounded-full shadow-2xl hover:bg-[#c0a030] transition duration-300 transform hover:scale-105 uppercase tracking-wider">
+                Begin Your Darshan
+            </a>
+            <div class="scroll-indicator mt-8"></div>
+        </div>
+    </header>
+
+    <section class="max-w-7xl mx-auto py-20 px-6 lg:px-8" id="regions">
+        <h2 class="text-5xl font-extrabold text-center mb-16 uppercase tracking-wider">
+            Iconic <span class="text-gold">Regions</span> Await
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden card-hover transform hover:scale-[1.02]">
+                <img src="aj mahal.jpeg" alt="The Taj Mahal" class="w-full h-56 object-cover transition duration-500">
+                <div class="p-6">
+                    <h3 class="text-3xl font-semibold text-maroon mb-2">The Golden Triangle</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        Delhi, Agra, and Jaipur: The classic route of grand Mughal history and Rajput royalty.
+                    </p>
+                    <div class="flex justify-between items-center text-sm border-t pt-3">
+                        <span class="font-bold text-gold flex items-center">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"></path></svg>
+                            <span class="font-normal text-maroon ml-1">28°C / Clear</span>
+                        </span>
+                        <a href="destinations1.html" class="text-maroon font-bold hover:text-gold transition duration-200">
+                            Explore History →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden card-hover transform hover:scale-[1.02]">
+                <img src="kerela.avif" alt="Kerala Backwaters" class="w-full h-56 object-cover transition duration-500">
+                <div class="p-6">
+                    <h3 class="text-3xl font-semibold text-maroon mb-2">Kerala: God's Own Country</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        Tranquil backwaters, Ayurvedic wellness, and lush spice plantations in the tropical South.
+                    </p>
+                    <div class="flex justify-between items-center text-sm border-t pt-3">
+                        <span class="font-bold text-gold flex items-center">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"></path></svg>
+                            <span class="font-normal text-maroon ml-1">26°C / Monsoon</span>
+                        </span>
+                        <a href="destinations2.html" class="text-maroon font-bold hover:text-gold transition duration-200">
+                            View Retreats →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden card-hover transform hover:scale-[1.02]">
+                <img src="hima.jpg" alt="Ladakh Mountains" class="w-full h-56 object-cover transition duration-500">
+                <div class="p-6">
+                    <h3 class="text-3xl font-semibold text-maroon mb-2">The Himalayas (Ladakh)</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        High-altitude passes, ancient Buddhist monasteries, and barren, majestic beauty.
+                    </p>
+                    <div class="flex justify-between items-center text-sm border-t pt-3">
+                        <span class="font-bold text-gold flex items-center">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"></path></svg>
+                            <span class="font-normal text-maroon ml-1">12°C / Snow Capped</span>
+                        </span>
+                        <a href="destinations3.html" class="text-maroon font-bold hover:text-gold transition duration-200">
+                            Plan Trek →
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden card-hover transform hover:scale-[1.02]">
+                <img src="varanasi.jpg" alt="Varanasi Ganga Aarti" class="w-full h-56 object-cover transition duration-500">
+                <div class="p-6">
+                    <h3 class="text-3xl font-semibold text-maroon mb-2">Varanasi & Spirituality</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        The spiritual heart of India. Witness the timeless Ganga Aarti ceremony on the sacred ghats.
+                    </p>
+                    <div class="flex justify-between items-center text-sm border-t pt-3">
+                        <span class="font-bold text-gold flex items-center">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"></path></svg>
+                            <span class="font-normal text-maroon ml-1">31°C / Warm</span>
+                        </span>
+                        <a href="destinations4.html" class="text-maroon font-bold hover:text-gold transition duration-200">
+                            See Rituals →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="w-full border-t border-gray-300 my-16"></div>
+
+    <section class="max-w-7xl mx-auto pb-20 px-6 lg:px-8" id="experiences">
+        <h2 class="text-5xl font-extrabold text-center mb-16 uppercase tracking-wider">
+            Immersive <span class="text-gold">Experiences</span>
+        </h2>
+        <div class="flex flex-col lg:flex-row gap-10">
+            <div class="lg:w-1/2 bg-white rounded-2xl shadow-2xl p-8 border-t-8 border-gold">
+                <h3 class="text-4xl font-extrabold text-maroon mb-4 flex items-center">
+                    <span class="text-gold mr-3">★</span> Festivals & Joy
+                </h3>
+                <p class="text-gray-700 mb-6 text-lg leading-relaxed">
+                    India is a land of perennial celebration. Timing your visit to coincide with a major festival offers a glimpse into the country's vibrant, collective spirit unlike any other experience.
+                </p>
+                <div class="space-y-4">
+                    <div class="p-4 bg-yellow-50/70 rounded-lg border-l-4 border-yellow-500">
+                        <p class="font-semibold text-xl text-maroon">Diwali: Festival of Lights</p>
+                        <p class="text-sm text-gray-600">October/November. See Amritsar's Golden Temple lit up like a jewel box.</p>
+                    </div>
+                    <div class="p-4 bg-pink-50/70 rounded-lg border-l-4 border-red-500">
+                        <p class="font-semibold text-xl text-maroon">Holi: Festival of Colors</p>
+                        <p class="text-sm text-gray-600">March. Participate in the playful chaos of colors in Mathura or Vrindavan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:w-1/2 bg-white rounded-2xl shadow-2xl p-8 border-t-8 border-maroon">
+                <h3 class="text-4xl font-extrabold text-maroon mb-4 flex items-center">
+                    <span class="text-gold mr-3">★</span> Wellness & Taste
+                </h3>
+                <p class="text-gray-700 mb-6 text-lg leading-relaxed">
+                    Beyond the monuments lies the deep cultural philosophy of healing and cuisine. Engage your senses with a retreat or a cooking class.
+                </p>
+                <div class="space-y-4">
+                    <div class="p-4 bg-green-50/70 rounded-lg border-l-4 border-green-500">
+                        <p class="font-semibold text-xl text-maroon">Yoga & Ayurveda</p>
+                        <p class="text-sm text-gray-600">Find your center in Rishikesh, the Yoga Capital, or a traditional spa in Kerala.</p>
+                    </div>
+                    <div class="p-4 bg-orange-50/70 rounded-lg border-l-4 border-orange-500">
+                        <p class="font-semibold text-xl text-maroon">Culinary Journeys</p>
+                        <p class="text-sm text-gray-600">Savor the street food of Delhi's Old Quarter or a royal Rajasthani Thali meal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Reviews (Carousel) -->
+  <section class="bg-[#FBF9F1] py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-5xl font-extrabold text-maroon mb-16">Clients <span class="text-gold">Reviews</span></h2>
+
+      <div class="overflow-hidden relative">
+        <div id="reviews-slider" class="flex transition-transform duration-700 ease-in-out">
+          <!-- Review 1 -->
+          <div class="min-w-full bg-white p-8 rounded-xl shadow-lg border-t-4 border-gold">
+            <p class="italic text-gray-700">“Perfectly organized trip! Loved every moment.”</p>
+            <h4 class="mt-4 font-bold text-maroon">Rahul Mehta – UK</h4>
+          </div>
+          <!-- Review 2 -->
+          <div class="min-w-full bg-white p-8 rounded-xl shadow-lg border-t-4 border-gold">
+            <p class="italic text-gray-700">“A soulful experience of India’s traditions.”</p>
+            <h4 class="mt-4 font-bold text-maroon">Anna Smith – USA</h4>
+          </div>
+          <!-- Review 3 -->
+          <div class="min-w-full bg-white p-8 rounded-xl shadow-lg border-t-4 border-gold">
+            <p class="italic text-gray-700">“Highly recommended for first-time travelers!”</p>
+            <h4 class="mt-4 font-bold text-maroon">Kenji Tanaka – Japan</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Dots -->
+      <div class="flex justify-center mt-6" id="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="bg-maroon py-20 px-6" id="contact">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-5xl font-extrabold text-white">Design Your Journey</h2>
+      <form class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        <input type="email" placeholder="Your Email" class="w-full sm:w-80 p-4 rounded-lg border-2 border-gold">
+        <button class="bg-gold text-maroon px-6 py-3 rounded-lg font-bold">Start Planning</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-10 text-center">
+    <p class="font-semibold">© 2025 Bharat Darshan Travel Co.</p>
+  </footer>
+
+  <!-- Carousel Script -->
+  <script>
+    const slider = document.getElementById("reviews-slider");
+    const dots = document.querySelectorAll(".dot");
+    let index = 0;
+
+    function showSlide(i) {
+      slider.style.transform = `translateX(-${i * 100}%)`;
+      dots.forEach(dot => dot.classList.remove("active"));
+      dots[i].classList.add("active");
+      index = i;
+    }
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => showSlide(i));
+    });
+
+    setInterval(() => {
+      index = (index + 1) % dots.length;
+      showSlide(index);
+    }, 5000);
+   </script> 
+
+</body>
+</html>

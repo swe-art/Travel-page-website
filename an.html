@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience India - Travel India</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .text-maroon { color: #4B0000; }
+    .bg-gold { background-color: #D4AF37; }
+    .text-gold { color: #D4AF37; }
+    /* Hero with background image */
+    .hero-experience {
+      background: url('puri.jpg') center/cover no-repeat;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero-experience::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5); /* dark overlay */
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-maroon">BHARAT <span style="color: gold;">DARSHAN</span></h1>
+      <nav class="space-x-6 font-medium">
+        <a href="index.html" class="hover:text-gold">Home</a>
+        <a href="destinations.html" class="hover:text-gold">Destinations</a>
+        <a href="an.html" class="hover:text-gold">Experience</a>
+        <a href="book now.html" class="hover:text-gold">book now </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+   <section class="hero-experience">
+  <section class="relative h-[70vh] flex items-center justify-center">
+    
+    <div class="overlay"></div>
+    
+    <div class="relative z-10 flex items-center justify-center h-full">
+      <div class="text-center text-white px-6">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 drop-shadow-lg">Experience Incredible India</h1>
+        <p class="text-lg md:text-2xl max-w-2xl mx-auto mb-8 drop-shadow-md">
+          Explore local culture, cuisine, adventures, and unforgettable experiences across India.
+        </p>
+        <a href="#activities" class="bg-gold text-black font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-white hover:text-maroon transition">
+          Explore Activities ↓
+        </a>
+      </div>
+    </div>
+  </section></section>
+
+  <!-- Activities Section -->
+  <section id="activities" class="py-20 px-6 max-w-7xl mx-auto">
+    <h2 class="text-4xl font-bold text-maroon mb-12 text-center">Top Experiences</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      
+      <!-- Card 1 -->
+      <div class="relative group rounded-2xl overflow-hidden shadow-xl hover:scale-105 transform transition duration-500">
+        <img src="sun.webp" alt="Taj Mahal Sunrise" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+        <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center p-6">
+          <h3 class="text-2xl font-semibold mb-2 text-gold">Taj Mahal Sunrise</h3>
+          <p class="text-gray-200 text-sm">
+            Witness the Taj Mahal bathed in golden sunlight and feel the magic of love.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="relative group rounded-2xl overflow-hidden shadow-xl hover:scale-105 transform transition duration-500">
+        <img src="van.jpg" alt="Varanasi Ghats" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+        <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center p-6">
+          <h3 class="text-2xl font-semibold mb-2 text-gold">Varanasi Ghats</h3>
+          <p class="text-gray-200 text-sm">
+            Take a boat ride along the sacred Ganges and experience spiritual rituals at sunrise.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="relative group rounded-2xl overflow-hidden shadow-xl hover:scale-105 transform transition duration-500">
+        <img src="k.jpg" alt="Kerala Backwaters" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+        <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center p-6">
+          <h3 class="text-2xl font-semibold mb-2 text-gold">Kerala Backwaters</h3>
+          <p class="text-gray-200 text-sm">
+            Cruise through tranquil backwaters in a traditional houseboat and enjoy local cuisine.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="relative group rounded-2xl overflow-hidden shadow-xl hover:scale-105 transform transition duration-500">
+        <img src="h.webp" alt="Himalayas Trekking" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+        <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center p-6">
+          <h3 class="text-2xl font-semibold mb-2 text-gold">Himalayas Trekking</h3>
+          <p class="text-gray-200 text-sm">
+            Embark on thrilling treks and witness breathtaking mountain vistas.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="relative group rounded-2xl overflow-hidden shadow-xl hover:scale-105 transform transition duration-500">
+        <img src="rajas.jpg" alt="Rajasthan Festival" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+        <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center p-6">
+          <h3 class="text-2xl font-semibold mb-2 text-gold">Rajasthan Festivals</h3>
+          <p class="text-gray-200 text-sm">
+            Immerse yourself in vibrant cultural festivals with music, dance, and color.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="relative group rounded-2xl overflow-hidden shadow-xl hover:scale-105 transform transition duration-500">
+        <img src="food.webp" alt="Indian Cuisine" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+        <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center p-6">
+          <h3 class="text-2xl font-semibold mb-2 text-gold">Culinary Delights</h3>
+          <p class="text-gray-200 text-sm">
+            Taste authentic Indian dishes from street food to royal cuisine.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-6 mt-10">
+    <div class="max-w-7xl mx-auto text-center">
+      <p>&copy; 2025 Travel India. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taj Mahal - Travel India</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+            --color-primary: #D4AF37; /* Rich Gold/Brass */
+            --color-secondary: #4B0000; /* Deep Maroon/Burgundy */
+            --color-cream: #FBF9F1;
+        }
+    body { font-family: 'Poppins', sans-serif; 
+    background-color: cornsilk;
+  
+  }
+    .text-maroon { color: #4B0000; }
+    .bg-gold { background-color: #D4AF37; }
+    .text-gold { color: #D4AF37; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-maroon">Travel India</h1>
+      <nav class="space-x-6 font-medium">
+        <a href="index.html" class="hover:text-gold">Home</a>
+        <a href="destinations.html" class="hover:text-gold">Destinations</a>
+        <a href="an.html" class="hover:text-gold">Experience</a>
+        <a href="contact.html" class="hover:text-gold">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section with Video Background -->
+  <section class="relative h-screen w-full overflow-hidden">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+      <source src="istockphoto-1488549727-640_adpp_is.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <!-- Text Content -->
+    <div class="relative z-10 flex items-center justify-center h-full">
+      <div class="text-center text-white px-6">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 drop-shadow-lg">
+          The Majestic Taj Mahal
+        </h1>
+        <p class="text-lg md:text-2xl max-w-2xl mx-auto mb-8 drop-shadow-md">
+          Experience the eternal symbol of love at sunrise, where history, art, and beauty unite.
+        </p>
+        <a href="#highlights" 
+           class="bg-gold text-black font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-white hover:text-maroon transition">
+           Explore More ↓
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="max-w-6xl mx-auto py-16 px-6">
+    <h3 class="text-4xl font-semibold text-maroon mb-6 text-center">About the Taj Mahal</h3>
+    <p class="text-gray-700 leading-relaxed text-lg text-center max-w-4xl mx-auto">
+      The Taj Mahal, located in Agra, Uttar Pradesh, is one of the Seven Wonders of the World. 
+      Built by Mughal Emperor <b>Shah Jahan</b> in memory of his beloved wife <b>Mumtaz Mahal</b>, 
+      this ivory-white marble mausoleum is the finest example of Mughal architecture, 
+      combining Islamic, Persian, and Indian styles. 
+      Its symmetry, gardens, and aura make it one of the most visited monuments worldwide.
+    </p>
+  </section>
+
+  <!-- Highlights Section -->
+  <section id="highlights" class="bg-gradient-to-r from-maroon to-gold py-20 px-6 text-white relative">
+    <h3 class="text-4xl font-bold text-center mb-14 tracking-wide drop-shadow-lg" style="color: purple;">✨ Highlights ✨</h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto relative z-10">
+      
+      <!-- Card 1 -->
+      <div class="relative group rounded-2xl overflow-hidden shadow-xl hover:scale-105 transform transition duration-500">
+        <img src="architecture.jpg" alt="Taj Mahal Architecture" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+        <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center p-6">
+          <div class="text-5xl mb-3 text-gold">🏛️</div>
+          <h4 class="font-semibold text-2xl mb-2">Majestic Architecture</h4>
+          <p class="text-gray-200 text-sm leading-relaxed">
+            Intricate marble carvings, gemstone inlays, and Mughal artistry.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="relative group rounded-2xl overflow-hidden shadow-xl hover:scale-105 transform transition duration-500">
+        <img src="charbagh garden.jpg" alt="Taj Mahal Gardens" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+        <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center p-6">
+          <div class="text-5xl mb-3 text-gold">🌿</div>
+          <h4 class="font-semibold text-2xl mb-2">Charbagh Gardens</h4>
+          <p class="text-gray-200 text-sm leading-relaxed">
+            Paradise-inspired gardens with fountains and symmetry.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="relative group rounded-2xl overflow-hidden shadow-xl hover:scale-105 transform transition duration-500">
+        <img src="love.jpg" alt="Taj Mahal Symbol of Love" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+        <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center p-6">
+          <div class="text-5xl mb-3 text-gold">❤️</div>
+          <h4 class="font-semibold text-2xl mb-2">Eternal Love</h4>
+          <p class="text-gray-200 text-sm leading-relaxed">
+            Commissioned by Shah Jahan for Mumtaz Mahal, a timeless symbol of love.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  
+
+  <!-- Travel Info -->
+  <section class="bg-gray-100 py-16 px-6">
+    <h3 class="text-4xl font-semibold text-center text-maroon mb-10">Plan Your Trip</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-bold mb-3">📅 Best Time to Visit</h4>
+        <p>October to March (cooler weather, clear skies, perfect for sightseeing).</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-bold mb-3">💰 Entry Fee</h4>
+        <p>₹50 (Indians), ₹1100 (foreigners). Extra for mausoleum entry.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-bold mb-3">🕘 Visiting Hours</h4>
+        <p>Sunrise to Sunset. Closed on Fridays for prayers.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-bold mb-3">🌅 Travel Tips</h4>
+        <p>Arrive early for sunrise views. Avoid Fridays. Carry water & wear comfortable shoes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-6 mt-10">
+    <div class="max-w-7xl mx-auto text-center">
+      <p>&copy; 2025 Travel India. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

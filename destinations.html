@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Destinations</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f2f5f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    header.navbar {
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 1em 2em;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-links a {
+      margin-right: 1.5em;
+      text-decoration: none;
+      font-weight: 600;
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #1e90ff;
+    }
+
+    .heroine {
+      background: url('o.webp') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+
+    .heroine::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .heroine h1 {
+      font-size: 3rem;
+      z-index: 1;
+      margin: 0;
+    }
+
+    .filter-buttons {
+      text-align: center;
+      margin: 2em 0;
+    }
+
+    .filter-buttons button {
+      margin: 0.5em;
+      padding: 0.7em 1.5em;
+      border: none;
+      background: linear-gradient(90deg, #1e90ff, #00bfff);
+      color: white;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .filter-buttons button:hover {
+      background: linear-gradient(90deg, #004ea2, #0073e6);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    .destination-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2em;
+      padding: 2em;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .destination-card {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .destination-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .destination-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .destination-card h3 {
+      margin: 1em;
+      font-size: 1.3rem;
+      color: #1e90ff;
+    }
+
+    .destination-card p {
+      margin: 0 1em 1em;
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    .map-section {
+      margin: 3em auto;
+      max-width: 1000px;
+      padding: 0 1em;
+      text-align: center;
+    }
+
+    .map-section img {
+      width: 100%;
+      height: 400px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .map-section img:hover {
+      transform: scale(1.02);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1 style="font-weight: 700; color:#4B0000;">BHARAT <span style="color: gold;">DARSHAN</span> </h1>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="an.html">Experience</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="heroine">
+    <h1>Explore India's Best Destinations</h1>
+  </section>
+
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button data-filter="all">All</button>
+    <button data-filter="beach">Beach</button>
+    <button data-filter="mountain">Mountain</button>
+    <button data-filter="city">City</button>
+  </div>
+
+  <!-- Destination Grid -->
+  <section class="destination-grid">
+    <div class="destination-card beach">
+      <img src="goa.jpg" alt="Goa Beach">
+      <h3>Goa</h3>
+      <p>Relax on sunny beaches, enjoy beach shacks and nightlife.</p>
+    </div>
+    <div class="destination-card mountain">
+      <img src="mo.jpg" alt="Himalayas">
+      <h3>Himalayas</h3>
+      <p>Experience snowy peaks, spirituality, and adventure treks.</p>
+    </div>
+    <div class="destination-card city">
+      <img src="andaman.jpg" alt="Andaman">
+      <h3>Andaman and Nicobar Islands</h3>
+      <p>Pristine beaches, lush rainforests, and rich coral reefs.</p>
+    </div>
+    <div class="destination-card beach">
+      <img src="jaipur.jpg" alt="Jaipur">
+      <h3>Jaipur</h3>
+      <p>Historic forts, palaces, and cultural heritage.</p>
+    </div>
+    <div class="destination-card city">
+      <img src="mumbai.avif" alt="Mumbai">
+      <h3>Mumbai</h3>
+      <p>Bollywood hub, vibrant street food, and iconic landmarks.</p>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section">
+    <h2>🌍 Interactive Travel Map</h2>
+    <img src="f.webp" alt="Travel Map">
+  </section>
+
+  <!-- Filter Script -->
+  <script>
+    $(document).ready(function () {
+      $('.filter-buttons button').click(function () {
+        const filter = $(this).attr('data-filter');
+        if (filter === 'all') {
+          $('.destination-card').fadeIn();
+        } else {
+          $('.destination-card').fadeOut();
+          $('.' + filter).fadeIn();
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
